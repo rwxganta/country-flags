@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script src="./assets/js/app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fonts.coollabs.io/css2?family=Oswald:wght@200;300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Country Flags</title>
 </head>
@@ -15,8 +17,17 @@
         1. input field for country names
         2. Search buttom
         3. principal country in the middle card
-        4. All the border country on a small row under principal card or a side grid
+        4. All the border country on a side grid
+        5. If we click in one of the neighbors, it become the pricipal one. New search
      -->
+
+     <header>
+        <h1>Countries</h1>
+        <form action="#">
+            <input id='input' type="text" placeholder='Type a country name' required>
+            <button id='search-btn'>Search</button>
+        </form>
+     </header>
 
      <div class="container">
         <div class="country">
@@ -31,7 +42,7 @@
             </div>
         </div>
 
-        <div class="neighbor-countries">
+        <div class="border-countries">
             <div class="neighbor"></div>
         </div>
      </div>

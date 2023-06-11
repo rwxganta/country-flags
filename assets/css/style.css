@@ -1,0 +1,75 @@
+:root {
+    --ff-base: 'Oswald', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-base);
+    line-height: 1.4;
+}
+
+header {
+    margin-inline: .5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+h1 {
+    font-size: clamp(4rem, 10vw + .5rem, 8rem);
+    font-weight: 700;
+    line-height: 1.1;
+
+    align-self: end;
+}
+
+header form {
+    max-width: 250px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+}
+
+#input {
+    padding: .3rem .5rem;
+    font-family: inherit;
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1;
+    border: 0;
+    outline: 1px solid lightgrey;
+
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+#input:focus {
+    outline: 2px solid gray;
+}
+
+#search-btn {
+    padding: .5rem 1.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: lightgrey;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+#search-btn:focus,
+#search-btn:hover {
+    color: whitesmoke;
+    background-color: gray;
+}

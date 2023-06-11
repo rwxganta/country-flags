@@ -31,7 +31,7 @@ header {
 }
 
 h1 {
-    font-size: clamp(4rem, 10vw + .5rem, 8rem);
+    font-size: clamp(3rem, 10vw + .5rem, 8rem);
     font-weight: 700;
     line-height: 1.1;
 
@@ -82,7 +82,6 @@ header form {
 }
 
 .container {
-    outline: 1px solid brown;
     margin-block-start: 3rem;
     margin-inline: .5rem;
 
@@ -91,12 +90,7 @@ header form {
     grid-auto-flow: row;
 }
 
-.container:empty {
-
-}
-
 .country {
-    /*outline: 1px solid tomato;*/
     margin-inline: auto;
     max-width: 320px;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
@@ -115,4 +109,30 @@ header form {
     line-height: 1.1;
     margin-bottom: .3em;
     font-weight: 700;
+}
+
+
+@media (min-width: 560px) {
+    header {
+        margin-top: .5em;
+
+        flex-direction: row;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    header h1 {
+        line-height: 80px;
+        align-self: start;
+        order: 1;
+    }
+
+    .container {
+        margin-block-start: 6rem;
+        padding-inline-start: 7.5rem;
+    }
+
+    .country {
+        margin-inline: unset;
+    }
 }

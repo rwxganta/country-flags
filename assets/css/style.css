@@ -12,7 +12,14 @@
 
 body {
     font-family: var(--ff-base);
-    line-height: 1.4;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
 }
 
 header {
@@ -72,4 +79,40 @@ header form {
 #search-btn:hover {
     color: whitesmoke;
     background-color: gray;
+}
+
+.container {
+    outline: 1px solid brown;
+    margin-block-start: 3rem;
+    margin-inline: .5rem;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+}
+
+.container:empty {
+
+}
+
+.country {
+    /*outline: 1px solid tomato;*/
+    margin-inline: auto;
+    max-width: 320px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+
+.country-info {
+    padding: .5rem;
+    font-weight: 300;
+}
+
+.country-info span {
+    font-weight: 400;
+}
+
+.country-info h2 {
+    line-height: 1.1;
+    margin-bottom: .3em;
+    font-weight: 700;
 }

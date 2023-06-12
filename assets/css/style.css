@@ -88,6 +88,7 @@ header form {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-flow: row;
+    row-gap: 5rem;
 }
 
 .country {
@@ -111,8 +112,57 @@ header form {
     font-weight: 700;
 }
 
+.neighbors {
+    margin-inline: auto;
+    max-width: max-content;
+    height: 100%;
 
-@media (min-width: 560px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .3rem;
+
+    position: relative;
+}
+
+/*.neighbors::before {
+    content: 'Neighbor countries';
+    position: absolute;
+    top: -40px;
+    font-size: 1.4rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+}*/
+
+/*.neighbors:empty .neighbors::before {
+    display: none
+}*/
+
+.neighbor {
+    display: grid;
+}
+
+.neighbor > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+
+.neighbor-flag {
+    width: 100%;
+    height: 100%;
+}
+
+.neighbor-flag img {
+    object-fit: cover;
+}
+
+.neighbor-name {
+    padding: .2em;
+    font-weight: 300;
+    line-height: 1.1;
+    align-self: end;
+}
+
+@media (min-width: 780px) {
     header {
         margin-top: .5em;
 
@@ -130,9 +180,21 @@ header form {
     .container {
         margin-block-start: 6rem;
         padding-inline-start: 7.5rem;
+
+        grid-template-columns: auto auto;
+        justify-content: start;
+        align-items: start;
+        column-gap: 5rem;
     }
 
     .country {
         margin-inline: unset;
+    }
+
+    .neighbors {
+        margin-inline: unset;
+        grid-template-columns: repeat(4, 170px);
+        align-items: start;
+        place-content: start;
     }
 }

@@ -37,7 +37,6 @@ function createCountry({
         const countryEl = document.createElement('div');
         container.innerHTML = '';
         countryEl.innerHTML = `
-        <div class="country">
             <div class="country-flag">
                 <img class='flag-image' src="${flags.svg}" alt="">
             </div>
@@ -48,7 +47,7 @@ function createCountry({
                 <p><span>Population: </span>${populationFormat}</p>
                 <p><span>Currency: </span>${symbol} ${currency}</p>
             </div>
-        </div>
         `;
+        countryEl.classList.add('country');
         container.insertAdjacentElement('beforeend', countryEl);
     };

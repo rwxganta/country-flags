@@ -53,7 +53,6 @@ function createCountry({
 
         countryEl.classList.add('country');
         container.insertAdjacentElement('afterbegin', countryEl);
-        container.removeChild(container.firstElementChild);
         if (borders.length === 0) return;
         borders.forEach((country) => {
             const request2 = new XMLHttpRequest();
